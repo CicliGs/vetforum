@@ -1,0 +1,368 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #333333;
+    position: relative;
+}
+.worksheet {
+    max-width: 1104px;
+    margin: auto;
+}
+.worksheet-back-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 19.17%;
+    z-index: -1;
+}
+.worksheet-back-2 {
+    position: absolute;
+    top: 309px;
+    right: 0;
+    width: 26.06%;
+    z-index: -1;
+}
+.worksheet-back-3 {
+    position: absolute;
+    top: 878px;
+    left: 0;
+    width: 21.51%;
+    z-index: -1;
+}
+@media (max-width: 1439px) {
+    .worksheet-back-1 {
+        width: 15.34%;
+    }
+    .worksheet-back-2 {
+        top: 385px;
+        width: 20.85%;
+    }
+    .worksheet-back-3 {
+        width: 17.2%;
+    }
+}
+.worksheet-header {
+    padding: 0 20px;
+}
+.worksheet-header img {
+    margin: 21px auto 19px;
+}
+.worksheet-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+}
+#worksheet_form {
+    background: url('/img/form/form-back.png') right top no-repeat;
+    background-size: cover;
+    background-color: #5c5c5c;
+    border: 0.5px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 54px;
+    padding: 52px 19px 30px;
+    margin-top: 32px;
+    margin-bottom: 63px;
+}
+@media (max-width: 1023px) {
+    .worksheet-back-1, .worksheet-back-2, .worksheet-back-3 {
+        display: none;
+    }
+    #worksheet_form {
+        background: #5c5c5c;
+    }
+}
+.worksheet-body {
+    max-width: 872px;
+    margin: auto;
+}
+.form-group {
+    border: 0.5px solid #FFFFFF;
+    border-radius: 16px;
+    padding: 0 34px 10px 22px;
+    margin-bottom: 46px;
+}
+.form-group label {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+.form-group > label {
+    position: relative;
+    top: -11px;
+    background: #5c5c5c;
+    padding: 0 13px;
+    display: inline-block;
+    max-width: 740px;
+}
+.form-group label.important {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    top: -13px;
+}
+@media (max-width: 424px) {
+    .form-group label {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .form-group label.important {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+.form-group.big {
+    margin-top: 62px;
+}
+.form-group.big label.important {
+    top: -28px;
+}
+.form-group.big textarea {
+    margin-top: -8px;
+}
+.form-group input[type=text], .form-group textarea {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid #999999;
+    border-radius: 13px;
+    font-size: 20px;
+    line-height: 22px;
+    color: white;
+    padding: 7px 11px;
+}
+.form-group input[type=text] {
+    max-width: 384px;
+    height: auto;
+    margin-bottom: 0;
+    margin-top: -7px;
+}
+.form-group input.has-error, .form-group textarea.has-error {
+    border: 1px solid #FF0000;
+}
+.form-group textarea {
+    margin-top: 7px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    resize: none;
+    height: 63px;
+}
+@media (max-width: 424px) {
+    .form-group input[type=text], .form-group textarea {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .form-group textarea {
+        height: 50px;
+    }
+}
+.worksheet-body .radio-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-top: 6px;
+}
+.worksheet-body input[type=radio], .worksheet-body input[type=checkbox] {
+    display: none;
+}
+.worksheet-body input[type=radio] + label {
+    display: -webkit-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 53px;
+    position: relative;
+    cursor: pointer;
+    min-height: 30px;
+}
+.worksheet-body input[type=radio] + label:not(:last-child) {
+    margin-bottom: 12px;
+}
+.worksheet-body input[type=radio] + label:before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+.worksheet-body input.has-error[type=radio] + label:before {
+    border: 1px solid #FF0000;
+}
+.worksheet-body input[type=radio]:checked + label:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #41DB3F;
+    border-radius: 50%;
+}
+.worksheet-body .agree-group {
+    margin-top: -24px;
+    margin-bottom: 24px;
+    padding: 0 22px;
+}
+.worksheet-body .check-group {
+    position: relative;
+}
+.worksheet-body input[type=checkbox] + label {
+    display: -webkit-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 46px;
+    margin-bottom: 0;
+    position: relative;
+    cursor: pointer;
+    min-height: 30px;
+    max-width: 527px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+}
+@media (max-width: 424px) {
+    .worksheet-body .agree-group {
+        margin-bottom: 16px;
+    }
+    .worksheet-body input[type=checkbox] + label {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+.worksheet-body input[type=checkbox] + label:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+.worksheet-body input[type=checkbox]:checked + label:after {
+    display: block;
+    content: url("/img/form/check.png");
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0.5px;
+    width: 31px;
+    height: 25px;
+    margin: auto;
+}
+.worksheet-body input[type=checkbox] + label a {
+    color: white !important;
+    font-weight: 600;
+}
+.worksheet-thanks {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    margin-bottom: 27px;
+}
+.worksheet-button {
+    text-align: center;
+}
+.worksheet-submit {
+    width: 226px;
+    background: #41DB3F;
+    border: none;
+    border-radius: 23px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    padding: 12px;
+    cursor: pointer;
+}
+.worksheet-submit[disabled] {
+    opacity: 0.6;
+    cursor: default;
+}
+@media (max-width: 424px) {
+    .worksheet-thanks {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 16px;
+    }
+    .worksheet-submit {
+        padding: 8px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+.worksheet-bottom {
+    max-width: 1920px;
+    padding: 329px 0 184px;
+    margin: auto;
+    background: url('/img/form/bottom.png') center center;
+    background-size: cover;
+    text-align: right;
+}
+.worksheet-contacts {
+    padding: 22px 46px 22px 34px;
+    background: #41DB3F;
+    border-radius: 43px 0 0 43px;
+    display: inline-block;
+    text-align: left;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.worksheet-contacts > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.worksheet-contacts > div:not(:last-child) {
+    margin-bottom: 17px;
+}
+.worksheet-contacts img {
+    width: 45px;
+    height: 45px;
+    margin-right: 9px;
+}
+@media (max-width: 767px) {
+    .worksheet-contacts {
+        width: 50%;
+        padding: 8px;
+        border-radius: 16px 0 0 16px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .worksheet-contacts > div:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    .worksheet-contacts img {
+        width: 32px;
+        height: 32px;
+    }
+}

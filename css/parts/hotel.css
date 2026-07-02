@@ -1,0 +1,38 @@
+#hotel {
+  background: #fff;
+  padding: 64px 20px;
+}
+
+#hotel .content {
+  max-width: var(--container, 1240px);
+  margin: 0 auto;
+}
+
+.hotel-transfer__lead {
+  color: var(--orange-deep, #f08a2e);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.hotel-transfer p {
+  color: var(--muted, #6b6b6b);
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+.hotel-transfer__program {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #ececec;
+}
+
+.hotel-transfer__program h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.hotel-transfer__program p {
+  margin-bottom: 16px;
+}

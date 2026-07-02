@@ -1,0 +1,833 @@
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Roman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Roman.otf") format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HelveticaNeueCyrMedium";
+  src: url("../fonts/HelveticaNeueCyr-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:link {
+  text-decoration: none;
+  font-family: "HelveticaNeueCyrMedium";
+}
+
+* {
+  font-family: "HelveticaNeueCyr";
+}
+
+a {
+  display: inline-block;
+}
+
+p .blockTitle {
+  font-weight: bold;
+  font-size: 24px;
+}
+.animals > p,
+.welcom > p,
+.organizer > p,
+.whatYouGet > p,
+.program > p,
+.features > p,
+.cost > p,
+.participate > p,
+.contacts > p,
+.partners p,
+.location p {
+  padding: 40px 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+nav.navbar {
+  background-color: #fff !important;
+  font-size: 19px;
+  padding: 8px 10%;
+}
+
+nav.navbar a:hover {
+}
+
+nav.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav a:link {
+  font-family: "HelveticaNeueCyr";
+  font-weight: normal;
+}
+
+nav .registration {
+  color: #000 !important;
+}
+
+nav .registration:link {
+  font-family: "HelveticaNeueCyrMedium";
+}
+
+nav.navbar a.registration:hover {
+  color: #e72b2b !important;
+}
+
+.toTop {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.toTop a {
+  display: block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  height: 50px;
+  width: 50px;
+}
+.toTop div {
+  margin: 0 auto;
+  width: 13px;
+  display: block;
+  border: 13px solid transparent;
+  border-bottom: 20px solid #e73849;
+  margin-top: -5px;
+}
+.main {
+  position: relative;
+  background: url(../images/dot.png);
+  background-repeat: repeat;
+  padding-top: 60px;
+  height: 850px;
+}
+.main > img,
+.main div {
+  position: absolute;
+  z-index: 10;
+}
+
+.main .date {
+  text-align: right;
+  width: 100%;
+  top: 110px;
+  right: 0;
+  background: #e73849;
+  z-index: 2;
+}
+.main .cow {
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.main .location {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  background: #fff;
+  padding: 30px;
+  font-size: 26px;
+  text-align: center;
+}
+.animals {
+  background: #333;
+  padding-bottom: 60px;
+}
+
+.animals > p {
+  color: #fff;
+}
+
+.animals .row {
+  margin: 0 auto;
+}
+
+.animals .col {
+  font-size: 24px;
+  text-align: center;
+}
+.animals .col p {
+  padding-top: 20px;
+  color: #fff;
+}
+
+.welcom {
+  background: #fbbe07;
+  padding-bottom: 60px;
+}
+
+.welcom > p {
+  color: #fff;
+}
+
+.welcom .row {
+  margin: 0 auto;
+  max-width: ;
+}
+
+.welcom .col {
+  font-size: 24px;
+  text-align: center;
+}
+.welcom .col p {
+  padding-top: 20px;
+}
+.whatYouGet {
+  background: url(../images/whatYouGet.png);
+  background-size: cover;
+  color: #fff;
+}
+.whatYouGet .tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.whatYouGet .tiles > div {
+  padding: 20px 60px;
+  max-width: 500px;
+  text-align: center;
+}
+.whatYouGet .tiles > div > div {
+  height: 160px;
+}
+.whatYouGet .tiles h5 {
+  font-weight: lighter;
+  font-size: 34px;
+}
+.whatYouGet .tiles p {
+  font-weight: lighter;
+  font-size: 18px;
+}
+.whatYouGet .blocks {
+  background: #333;
+
+  padding: 40px 0;
+}
+.whatYouGet .blocks > div {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.whatYouGet .blocks > div > div {
+  width: 400px;
+}
+.whatYouGet .blocks .red {
+  color: #e73849;
+}
+.whatYouGet .blocks .yellow {
+  color: #fbbe07;
+}
+.whatYouGet .blocks .green {
+  color: #5fb138;
+}
+.whatYouGet .blocks h1 {
+  font-weight: bolder;
+  font-size: 60px;
+}
+.whatYouGet .blocks > div p {
+  font-weight: lighter;
+  font-size: 20px;
+}
+.whatYouGet .blocks .color p {
+  font-size: 28px;
+}
+
+.organizer {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding-bottom: 160px;
+}
+
+.organizer p {
+ 
+  padding-bottom: 0;
+}
+
+.organizer .idg {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.organizer .vetdelo {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+}
+
+.organizer .vetdelo > div {
+  width: 50%;
+}
+
+.organizer .left {
+  text-align: center;
+}
+
+.organizer h1 {
+  margin-bottom: 45px;
+  font-size: 18px;
+  color: #355411;
+}
+
+.organizer .right {
+  overflow: hidden;
+}
+
+.organizer .right p {
+  color: #000;
+  font-size: 16px;
+}
+
+.organizer .right p.seo {
+  margin-top: -150px;
+  color: #fff;
+}
+
+.program {
+  background-image: url(../images/dot.png);
+  background-repeat: repeat;
+  background-color: #e73849;
+  text-align: center;
+}
+
+.program > p {
+  padding-top: 55px;
+  color: #fff;
+}
+
+.program .content {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  max-width: 1200px;
+  padding: 30px;
+  margin: 0 auto;
+  border: solid 0px #333399;
+  margin-bottom: 25px;
+  background: #fff;
+}
+
+.program table {
+  border-collapse: collapse;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.program th {
+  margin-right: 13px;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 15px 0;
+  width: 280px;
+  text-align: center;
+  color: #5fb138;
+}
+.program td {
+  padding: 10px 10px;
+  padding-left: 25px;
+  font: 20px/130% Arial;
+  
+}
+.program tr:nth-child(2n + 1) td,
+.program tr:nth-child(2n + 1) th {
+  background: #f8f8f8;
+}
+.program table td p {
+  margin: 0;
+  font-size: 14px;
+  color: #585858;
+  font-style: italic;
+  line-height: 20px;
+  padding-top: 10px;
+}
+.program tr td.title {
+  background: #5fb138;
+  padding: 15px 0;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  border: 2px solid #5fb138;
+}
+.program tr td.title2 {
+  background: #fff;
+  padding: 15px 0;
+  font-weight: bold;
+  color: #5fb138;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  border: 2px solid #5fb138;
+}
+.program th.title2 {
+  font-weight: normal;
+}
+.program table.yellow th {
+  color: #fbbe07;
+}
+.program table.yellow .title {
+  background: #fbbe07;
+  border: 2px solid #fbbe07;
+}
+.program table.yellow .title2 {
+  color: #fbbe07;
+  border: 2px solid #fbbe07;
+}
+.program h5 {
+  margin-top: 15px;
+  margin-bottom: 35px;
+  font-weight: normal;
+  text-align: center;
+  font-size: 16px;
+}
+
+.program .buttons {
+  background: transparent;
+  padding: 70px 0;
+}
+.program a {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 58px;
+  border: 3px solid #fff;
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: #e73849;
+}
+.program a.registrationButton {
+  border-color: #000;
+  color: #000;
+}
+.program a:hover {
+  text-decoration: none;
+  background: #fff;
+  color: #000;
+}
+.program a.registrationButton:hover {
+  background: #000;
+  color: #fff;
+  border: 3px solid #000;
+}
+.cost {
+  padding-bottom: 20px;
+  text-align: center;
+  color: #fff;
+  background: url(../images/costBack.png);
+  background-size: cover;
+}
+
+.cost .cards {
+  display: none;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.cost .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #fff;
+  color: #578727;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  width: 400px;
+  padding-bottom: 120px;
+}
+
+.cost .card p {
+  font-size: 24px;
+  text-align: center;
+}
+
+.cost .card p span {
+  font-weight: normal;
+}
+.cost .card .secondCost {
+  color: #000;
+}
+
+.cost .card .botLine {
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #578727;
+}
+
+.cost a {
+  color: #fff;
+  background: #e73849;
+  padding: 15px 0;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 40px;
+}
+.cost a:hover {
+  background: #e5626f;
+}
+.cost .costImg {
+  margin: auto;
+  max-width: 670px;
+}
+
+.participate {
+  background: url(../images/paticipateBack.png);
+  background-size: cover;
+  padding-bottom: 60px;
+  background-color: #e73849;
+}
+
+.participate p {
+  color: #fff;
+}
+
+.participate form {
+  text-align: center;
+  font-size: 18px;
+  padding: 30px 30px 60px 30px;
+  margin: 0 auto;
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.participate input {
+  margin: 10px 0;
+  color: #000;
+  padding: 8px 20px;
+  background: #fff;
+  border: none;
+  width: 290px;
+  box-sizing: border-box;
+}
+.participate form > div {
+  width: 100%;
+  display: flex;
+}
+.participate input.question {
+  width: 100%;
+}
+
+.participate form button {
+  border: 3px solid #fff;
+  background: transparent;
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 290px;
+  color: #fff;
+}
+.participate form button:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.contacts {
+  text-align: center;
+  padding-bottom: 70px;
+  background: url(../images/contactsBack.png);
+  background-size: cover;
+  color: #fff;
+}
+
+.contacts > div {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contacts > div > div {
+  margin: 0 auto;
+  width: 300px;
+}
+.contacts h1 {
+  text-align: center;
+  line-height: 22px;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.contacts h2 {
+  font-weight: lighter;
+  color: #fff;
+  font-size: 30px;
+  margin: 25px;
+}
+.contacts > div p {
+  margin: 10px 0;
+}
+
+.partners .row a{
+    cursor:default;
+}
+.partners {
+  padding-bottom: 50px;
+  padding-top: 40px;
+  text-align: center;
+  background: #fff;
+}
+
+.partners .partner {
+  padding: 30px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.partners p {
+  padding: 5px;
+  color: #000;
+}
+
+.partners .row p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.partners > a {
+  border: 3px solid #000;
+  padding: 10px 55px;
+  font-size: 20px;
+  background: transparent;
+  color: #000;
+}
+
+.partners > a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.map iframe {
+  margin-bottom: -7px;
+}
+
+.lastForums {
+
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.lastForums h3 {
+  padding: 50px 0;
+}
+
+.lastForums p,
+ul {
+  text-align: left;
+}
+
+.lastForums img {
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.lastForums .ui-tabs {
+  border: none;
+}
+
+.lastForums .ui-tabs li {
+  background: transparent;
+}
+
+.lastForums .ui-tabs li.ui-tabs-active {
+  background: #666;
+  border: #666;
+}
+
+.lastForums .ui-tabs-nav {
+  background: none;
+  border: none;
+}
+.lastForums .ui-tabs .ui-tabs-nav {
+  display: flex;
+}
+.lastForums .ui-tabs .ui-tabs-nav li {
+  width: 100%;
+  border: 1px solid #666;
+  border-radius: 0;
+  text-align: center;
+  margin: -1px -1px 0 0;
+}
+
+.lastForums .ui-tabs .ui-tabs-nav li a {
+  width: 100%;
+  font-weight: normal;
+  border: none;
+}
+.lastForums .ui-tabs .ui-tabs-nav li a:hover {
+  background: #666;
+  color: #fff;
+}
+
+.carousel {
+  margin: 0 auto;
+  max-width: 400px;
+}
+.footer {
+  padding: 20px 0;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+.footer p {
+  margin: 0;
+}
+@media all and (max-width: 1480px) {
+  .main {
+    height: 1200px;
+  }
+  .main .date {
+    top: 483px;
+  }
+}
+@media all and (max-width: 1050px) {
+  .main {
+    height: auto;
+  }
+  .main img,
+  .main div {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .main .date {
+    top: 0;
+  }
+  .main .date img {
+    width: 508px;
+  }
+  .main .location {
+    width: 100%;
+    position: relative;
+
+    left: 0;
+  }
+}
+@media all and (max-width: 990px) {
+  .main {
+    padding-top: 55px;
+  }
+  .organizer {
+    padding-bottom: 40px;
+  }
+  .organizer .vetdelo {
+    flex-direction: column;
+  }
+  .organizer .right {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .organizer .vetdelo > div {
+    width: 100%;
+  }
+  .cost .cards {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .cost .card {
+    margin: 10px auto;
+  }
+  .cost .card.include {
+    margin: 0;
+    width: 100%;
+  }
+  .map iframe {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 680px) {
+  .expContent img {
+    display: none;
+  }
+  .participate input {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .participate textarea {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .contacts > div {
+    flex-direction: column;
+  }
+  .contacts > div > div {
+    text-align: center;
+  }
+}
+@media all and (max-width: 520px) {
+  .main .date img {
+    width: 100%;
+  }
+
+}
+@media all and (max-width: 480px) {
+  .cost .card {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+  .organizer .vetdelo img {
+    padding: 10px;
+    width: 100%;
+  }
+  .program a {
+    width: 100%;
+  }
+  .participate form > div {
+    flex-wrap: wrap;
+  }
+  .participate form > div button {
+    padding: 8px 20px;
+    width: 100%;
+  }
+  .cost .card  a {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

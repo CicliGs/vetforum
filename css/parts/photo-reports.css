@@ -1,0 +1,112 @@
+#photo-reports {
+    padding: 3.65vw 7.29vw 6.77vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4.17vw;
+    position: relative;
+    z-index: 1;
+}
+
+#photo-reports .title {
+    font-family: Artegra Sans Extended;
+    font-weight: 900;
+    font-size: 3.95vw;
+    line-height: 5.68vw;
+    letter-spacing: -2%;
+    text-transform: uppercase;
+    color: #96CA08;
+    position: relative;
+}
+
+#photo-reports .title::before {
+    position: absolute;
+    content: '';
+    width: 45.05vw;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 5.00vw;
+    border: 0.09vw solid #96CA08;
+}
+
+#photo-reports .list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    column-gap: 5.21vw;
+}
+
+#photo-reports .list-item {
+    width: 100%;
+    height: 13.80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../img/photo-reports/item-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: flex-end;
+    border-radius: 0.66vw;
+    background-size: cover;
+}
+
+
+#photo-reports .list-item span {
+    font-family: Artegra Sans Extended;
+    font-weight: 600;
+    font-size: 0.67vw;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.47vw 0;
+    background: #96CA08;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 0.63vw 0.63vw;
+}
+
+#photo-reports .list-item:nth-child(2) {
+    background-image: url(../../img/photo-reports/item-2.png);
+}
+
+#photo-reports .list-item:nth-child(3) {
+    background-image: url(../../img/photo-reports/item-3.png);
+}
+
+@media (max-width: 575.5px) {
+    #photo-reports {
+        padding: 9.38vw 6.25vw 15.63vw;
+        row-gap: 7.81vw;
+    }
+
+    #photo-reports .title {
+        font-size: 7.00vw;
+        line-height: 10.00vw;
+    }
+
+    #photo-reports .title::before {
+        display: none;
+    }
+
+    #photo-reports .list {
+        flex-direction: column;
+        row-gap: 6.25vw;
+    }
+
+    #photo-reports .list-item {
+        height: 48.44vw;
+        border-radius: 2.19vw;
+    }
+
+    #photo-reports .list-item span {
+        font-size: 3.12vw;
+        line-height: 4.69vw;
+        padding: 2.50vw 0;
+        border-radius: 0 0 2.19vw 2.19vw;
+    }
+}
