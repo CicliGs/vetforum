@@ -5,7 +5,10 @@
 1. Откройте index.html в браузере (двойной клик).
 2. Или в этой папке: python -m http.server 8080 → http://localhost:8080
 
-GitHub Pages: загрузите всё содержимое папки landing-preview в репозиторий.
+GitHub Pages:
+1. Settings → Pages → Deploy from a branch → main / (root)
+2. Запушьте содержимое этой папки в репозиторий vetforum
+3. Сайт: https://cicligs.github.io/vetforum/
 
 Работает: вёрстка, меню, карусель, модалки регистрации и входа.
 Не работает: реальная отправка заявок на почту.

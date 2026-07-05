@@ -206,7 +206,7 @@
 
           <p class="hero-card-title">Деловая программа Форума</p>
 
-          <a class="btn-gradient hero-card__btn" href="source/program.pdf" target="_blank" rel="noopener">Подробнее <span>&#8594;</span></a>
+          <a class="btn-gradient hero-card__btn" href="#program">Подробнее <span>&#8594;</span></a>
 
         </div>
 
@@ -230,7 +230,7 @@
 
       <div class="video-thumb-list">
 
-        <a class="video-thumb-item" href="source/program.pdf" target="_blank" rel="noopener">
+        <a class="video-thumb-item" href="#program">
 
           <div class="video-thumb-preview">
 
@@ -750,6 +750,11 @@
   </div>
 </div>
 
+<div class="demo-banner">Демо-версия: формы не отправляются на сервер. Модалки работают для показа.</div>
+<script src="js/jquery-1.12.0.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="script.js"></script>
 <script type="text/javascript">
   function modalSubmitArrow() {
     return ' <span>&#8594;</span>';
@@ -798,45 +803,8 @@
     $('#agree_reg, #agree_reg_2').on('change', function () {
       $('#top-form-submit').prop('disabled', !($('#agree_reg').is(':checked') && $('#agree_reg_2').is(':checked')));
     });
-
-    $('#register-form').on('submit', function (e) {
-      e.preventDefault();
-      var form = $(this);
-      var formData = new FormData(form[0]);
-      form.find('button[type=submit]').attr('disabled', true);
-
-      $.ajax({
-        type: 'POST',
-        url: 'register.php',
-        data: formData,
-        processData: false,
-        contentType: false,
-        success: function () {
-          form[0].reset();
-          $('#top-form-submit').prop('disabled', true);
-          $('#regmodal').modal('hide');
-          $('#regsuccess').modal('show');
-        },
-        error: function (xhr) {
-          alert('Произошла ошибка при отправке формы: ' + xhr.responseText);
-        },
-        complete: function () {
-          form.find('button[type=submit]').removeAttr('disabled');
-        }
-      });
-    });
-
-    if ($.fn.mask) {
-      $('.phone-mask').mask('+375 (99) 999-99-99');
-    }
   });
 </script>
-
-<div class="demo-banner">Демо-версия: формы не отправляются на сервер. Модалки работают для показа.</div>
-<script src="js/jquery-1.12.0.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery.maskedinput.min.js"></script>
-<script src="script.js"></script>
 <script src="demo.js"></script>
 </body>
 </html>
