@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Третий Международный форум сельского хозяйства — демо</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    .demo-banner {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      z-index: 5000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(38, 38, 38, 0.92);
+      color: #fff;
+      font-family: Montserrat, sans-serif;
+      font-size: 12px;
+      line-height: 1.4;
+      text-align: center;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar" id="top">
+
+  <button class="navbar-toggle" type="button" aria-label="Меню">
+
+    <span></span><span></span><span></span>
+
+  </button>
+
+
+
+  <a href="#top" class="navbar-logo">
+
+    <img class="navbar-logo__triangle" src="img/header/logo-triangle.png" alt="">
+
+    <img class="navbar-logo__brand navbar-logo__brand--full" src="img/header/logo-brand.svg" alt="АПК Партнёр">
+
+  </a>
+
+
+
+  <ul class="navbar-menu">
+
+    <li><a href="#about">О Форуме</a></li>
+
+    <li><a href="#contacts" class="has-arrow">Трансфер и проживание</a></li>
+
+    <li><a href="#program" class="has-arrow">Программа</a></li>
+
+    <li><a href="#contacts" data-nav-priority="partners">Партнеры</a></li>
+
+    <li><a href="#magazine" class="has-arrow">СМИ</a></li>
+
+  </ul>
+
+
+
+  <div class="navbar-actions">
+
+    <a href="https://t.me/vetforumby" target="_blank" rel="noopener" aria-label="Telegram">
+
+      <img src="img/header/icon-telegram.svg" alt="">
+
+    </a>
+
+    <a href="https://www.instagram.com/vetforum.by/" target="_blank" rel="noopener" aria-label="Instagram">
+
+      <img src="img/header/icon-instagram.svg" alt="">
+
+    </a>
+
+    <div class="navbar-actions__phone">
+
+      <a href="tel:+375173692116" class="navbar-actions__phone-btn" aria-label="Телефон">
+
+        <img src="img/header/icon-call.svg" alt="">
+
+      </a>
+
+      <a href="tel:+375173692116" class="navbar-phone-tip">Вызов: +375 17 369 21 16</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+
+  <div class="mobile-menu__panel">
+
+    <div class="mobile-menu__head">
+
+      <div class="mobile-menu__toggle" aria-hidden="true">
+
+        <span></span><span></span>
+
+      </div>
+
+      <button class="mobile-menu__close" type="button">Закрыть</button>
+
+    </div>
+
+    <ul class="mobile-menu__nav">
+
+      <li class="is-active"><a href="#about">О Форуме</a></li>
+
+      <li><a href="#contacts" class="has-arrow">Трансфер и проживание</a></li>
+
+      <li><a href="#program" class="has-arrow">Программа</a></li>
+
+      <li><a href="#contacts" data-nav-priority="partners">Партнеры</a></li>
+
+      <li><a href="#magazine" class="has-arrow">СМИ</a></li>
+
+    </ul>
+
+    <div class="mobile-menu__social">
+
+      <a href="https://t.me/vetforumby" target="_blank" rel="noopener" aria-label="Telegram">
+
+        <img src="img/header/icon-telegram.svg" alt="">
+
+      </a>
+
+      <a href="https://www.instagram.com/vetforum.by/" target="_blank" rel="noopener" aria-label="Instagram">
+
+        <img src="img/header/icon-instagram.svg" alt="">
+
+      </a>
+
+      <a href="tel:+375173692116" aria-label="Телефон">
+
+        <img src="img/header/icon-call.svg" alt="">
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<section class="hero-section" id="header">
+
+  <div class="hero-layout">
+
+    <div class="hero-main">
+
+      <div class="hero-banner-wrap reveal">
+
+        <div class="hero-banner">
+
+          <div class="hero-meta">
+
+            <span class="hero-date">24 сентября 2026 года</span>
+
+            <div class="hero-separator"></div>
+
+            <span class="hero-location">Minsk Marriott Hotel (пр. Победителей, 20)</span>
+
+          </div>
+
+          <h1 class="hero-title">Третий Международный<br>форум сельского<br>хозяйства</h1>
+
+          <p class="hero-subtitle">Важная практическая площадка агропромышленного комплекса Беларуси</p>
+
+          <button class="btn-outline-white" type="button" onclick="openRegistrationModal('default')">
+
+            Зарегистрироваться <span>&#8594;</span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="hero-cow" aria-hidden="true">
+
+        <img src="img/header/cow-hero.png" alt="">
+
+      </div>
+
+
+
+      <div class="hero-cards">
+
+        <div class="hero-card hero-card--program reveal" id="program">
+
+          <div class="hero-card__decor" aria-hidden="true"></div>
+
+          <span class="hero-card-badge"><span>Анонс</span></span>
+
+          <p class="hero-card-title">Деловая программа Форума</p>
+
+          <a class="btn-gradient hero-card__btn" href="#program">Подробнее <span>&#8594;</span></a>
+
+        </div>
+
+        <div class="hero-card hero-card--spacer reveal" aria-hidden="true"></div>
+
+      </div>
+
+    </div>
+
+
+
+    <aside class="hero-sidebar reveal">
+
+      <h2 class="sidebar-title">Трансляция пленарного заседания</h2>
+
+      <a class="video-main" href="https://www.youtube.com/watch?v=d0CeLspGV2Y" target="_blank" rel="noopener">
+
+        <img src="img/agriculture/program-1.png" alt="Трансляция">
+
+      </a>
+
+      <div class="video-thumb-list">
+
+        <a class="video-thumb-item" href="#program">
+
+          <div class="video-thumb-preview">
+
+            <img src="img/agriculture/program-2.png" alt="">
+
+          </div>
+
+          <div class="video-thumb-content">
+
+            <p class="video-thumb-date">24 сентября 2026 года</p>
+
+            <p class="video-thumb-title">Третий Международный<br>форум сельского хозяйства</p>
+
+            <p class="video-thumb-location">Minsk Marriott Hotel (пр. Победителей, 20)</p>
+
+          </div>
+
+        </a>
+
+        <a class="video-thumb-item" href="#program">
+
+          <div class="video-thumb-preview">
+
+            <img src="img/agriculture/program-3.png" alt="">
+
+          </div>
+
+          <div class="video-thumb-content">
+
+            <p class="video-thumb-date">24 сентября 2026 года</p>
+
+            <p class="video-thumb-title">Третий Международный<br>форум сельского хозяйства</p>
+
+            <p class="video-thumb-location">Minsk Marriott Hotel (пр. Победителей, 20)</p>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+
+<section class="about-section reveal" id="about">
+
+  <div class="about-layout">
+
+    <div class="about-image">
+
+      <img src="img/agriculture/photo.jpg" alt="Форум сельского хозяйства">
+
+    </div>
+
+    <div class="about-content">
+
+      <h2>Масштабная практическая площадка отрасли</h2>
+
+      <p>Третий Всебелорусский форум сельского хозяйства — крупнейшее профессиональное событие агропромышленного комплекса Республики Беларусь.</p>
+
+      <p>Главная ценность Форума — обмен практическим опытом между предприятиями, внедрившими современные технологии и добившимися высоких производственных результатов.</p>
+
+      <p>В центре внимания — реальные производственные задачи, которые ежедневно решают руководители и специалисты сельскохозяйственных предприятий.</p>
+
+      <p>Каждое выступление — это конкретный опыт, подтвержденный цифрами, практикой и результатами.</p>
+
+      <p>Форум объединяет представителей Республики Беларусь и Российской Федерации, создавая единую площадку для обмена лучшими отраслевыми решениями.</p>
+
+      <a class="btn-gradient" href="https://vasencev.com/disk/vtoroy-mezhdunarodnyy-forum-selskogo-hozyaystva-tln2j5" target="_blank" rel="noopener">Фотоотчет <span>&#8594;</span></a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="features-section">
+
+  <div class="features-wrap reveal">
+
+    <div class="features-header">
+      <h2 class="features-heading">Главная&nbsp;практическая<br>площадка&nbsp;отрасли</h2>
+      <div class="features-nav" aria-label="Навигация по карточкам">
+        <button class="features-nav__btn features-nav__btn--prev" type="button" aria-label="Предыдущая карточка">&#8249;</button>
+        <button class="features-nav__btn features-nav__btn--next" type="button" aria-label="Следующая карточка">&#8250;</button>
+      </div>
+    </div>
+
+    <div class="features-grid" id="features-slider">
+
+      <article class="feature-card">
+
+        <img class="feature-card-image" src="img/agriculture/about-1.png" alt="">
+
+        <div class="feature-card-body">
+
+          <h3 class="feature-card-title">Лучшие производственные кейсы</h3>
+
+          <p class="feature-card-text">Участники познакомятся с опытом ведущих сельхозпредприятий, узнают, какие технологии действительно позволяют увеличить продуктивность, снизить затраты и повысить рентабельность производства.</p>
+
+        </div>
+
+      </article>
+
+      <article class="feature-card">
+
+        <img class="feature-card-image" src="img/agriculture/about-2.png" alt="">
+
+        <div class="feature-card-body">
+
+          <h3 class="feature-card-title">Прямой диалог с экспертами</h3>
+
+          <p class="feature-card-text">Более 30 спикеров — руководители успешных хозяйств, практикующие специалисты, ученые, представители ведущих компаний отрасли. Это возможность задать вопросы напрямую тем, кто ежедневно решает аналогичные производственные задачи.</p>
+
+        </div>
+
+      </article>
+
+      <article class="feature-card">
+
+        <img class="feature-card-image" src="img/agriculture/about-3.png" alt="">
+
+        <div class="feature-card-body">
+
+          <h3 class="feature-card-title">Профессиональное сообщество</h3>
+
+          <p class="feature-card-text">Форум объединит более 700 руководителей и специалистов сельского хозяйства Беларуси и России. Это новые деловые связи, обмен опытом и поиск партнеров.</p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="features-cta">
+
+      <button class="btn-gradient" type="button" onclick="openRegistrationModal('default')">Принять участие <span>&#8594;</span></button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="stats-section reveal" id="numbers">
+  <p class="stats-label">Форум в цифрах</p>
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-value">500+</div>
+      <div class="stat-desc">руководителей<br>и специалистов<br>отрасли</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">30+</div>
+      <div class="stat-desc">ведущих<br>экспертов<br>и практиков</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">5</div>
+      <div class="stat-desc">отраслевых<br>направлений</div>
+    </div>
+    <div class="stat-item stat-item--wide">
+      <div class="stat-value">Беларусь +<br>Россия</div>
+      <div class="stat-desc">обмен лучшими практиками</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">Десятки</div>
+      <div class="stat-desc">реальных<br>производственных<br>кейсов</div>
+    </div>
+  </div>
+</div>
+
+<section class="magazine-section reveal" id="magazine">
+
+  <div class="magazine-layout">
+
+    <div class="magazine-col-left">
+
+      <h2 class="magazine-heading">Журнал «АПК Партнёр»</h2>
+
+      <div class="magazine-image">
+
+        <img src="img/agriculture/magazine.png" alt="Журнал АПК Партнёр">
+
+      </div>
+
+    </div>
+
+    <div class="magazine-content">
+
+      <h3>Организатор Форума — «АПК Партнёр»</h3>
+
+      <p>Это одно из ведущих отраслевых изданий Республики Беларусь, объединяющее профессиональное сообщество агропромышленного комплекса. Журнал регулярно публикует эксклюзивные материалы о современных технологиях, успешном опыте сельхозпредприятий, инновационных решениях, экспертной аналитике и практических рекомендациях для руководителей и специалистов отрасли.</p>
+
+      <p>Участники Форума получают доступ к актуальной отраслевой информации и лучшим практикам агропромышленного комплекса.</p>
+
+      <div class="magazine-actions">
+
+        <a class="btn-gradient" href="source/dogovor-oferty-na-podpisku-zhurnalov.pdf" target="_blank" rel="noopener">Оформить подписку <span>&#8594;</span></a>
+
+        <button class="btn-outline-dark" type="button" onclick="openRegistrationModal('partners')">Разместить рекламу <span>&#8594;</span></button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="contacts-section reveal" id="contacts">
+
+  <div class="contacts-people">
+
+    <article class="contact-card">
+
+      <img class="contact-avatar" src="img/orgs/org-1.png" alt="">
+
+      <div class="contact-main">
+
+        <div class="contact-info">
+
+          <h4>Татьяна Близневская</h4>
+
+          <span class="role">Начальник отдела продаж</span>
+
+          <a href="tel:+375293692116" class="contact-phone">
+
+            <img src="img/header/icon-call-outgoing.svg" alt="">
+
+            (+375 29) 369-21-16
+
+          </a>
+
+        </div>
+
+        <div class="contact-actions">
+
+          <button class="btn-gradient contact-actions__btn" type="button" onclick="openRegistrationModal('default')" aria-label="Зарегистрироваться как участник"><span class="contact-actions__btn-text contact-actions__btn-text--desktop">Зарегистрироваться как участник</span><span class="contact-actions__btn-text contact-actions__btn-text--mobile">Зарегистрироваться</span> <span>&#8594;</span></button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="contact-card">
+
+      <img class="contact-avatar" src="img/orgs/org-2.png" alt="">
+
+      <div class="contact-main">
+
+        <div class="contact-info">
+
+          <h4>Екатерина Прудникова</h4>
+
+          <span class="role">Ведущий специалист по работе<br>с партнерами</span>
+
+          <a href="tel:+375445022858" class="contact-phone">
+
+            <img src="img/header/icon-call-outgoing.svg" alt="">
+
+            (+375 44) 502-28-58
+
+          </a>
+
+        </div>
+
+        <div class="contact-actions">
+
+          <button class="btn-gradient contact-actions__btn" type="button" onclick="openRegistrationModal('partners')">Стать партнером <span>&#8594;</span></button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+    <article class="contact-card">
+
+      <img class="contact-avatar" src="img/orgs/org-3.png" alt="">
+
+      <div class="contact-main">
+
+        <div class="contact-info">
+
+          <h4>Николай Амбросов</h4>
+
+          <span class="role">Ведущий специалист<br>по организации деловых<br>и образовательных мероприятий</span>
+
+          <a href="tel:+375445977650" class="contact-phone">
+
+            <img src="img/header/icon-call-outgoing.svg" alt="">
+
+            (+375 44) 597-76-50
+
+          </a>
+
+        </div>
+
+        <div class="contact-actions">
+
+          <button class="btn-gradient contact-actions__btn" type="button" onclick="openRegistrationModal('speaker')">Стать спикером <span>&#8594;</span></button>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="contacts-map">
+
+    <div class="contacts-map__frame">
+
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad0175baf6d3bc93a5717f4bc0c903990eba42023375488022179decdbc198dd0&amp;source=constructor" title="Карта" loading="lazy"></iframe>
+
+    </div>
+
+    <p class="contacts-map__caption">Место проведения — Minsk Marriott Hotel<br>(пр. Победителей, 20)</p>
+
+    <div class="contacts-map__social">
+
+      <a href="https://t.me/vetforumby" target="_blank" rel="noopener" aria-label="Telegram">
+
+        <img src="img/header/icon-telegram.svg" alt="">
+
+      </a>
+
+      <a href="https://www.instagram.com/vetforum.by/" target="_blank" rel="noopener" aria-label="Instagram">
+
+        <img src="img/header/icon-instagram.svg" alt="">
+
+      </a>
+
+      <a href="tel:+375173692116" aria-label="Телефон">
+
+        <img src="img/header/icon-call.svg" alt="">
+
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer class="footer" id="footer">
+
+  <div class="footer__top">
+
+    <div class="footer__links">
+
+      <a href="https://locus.by/assets/docs/politika_obrabotki_pers_dannykh_na_saytakh.pdf" target="_blank" rel="noopener">Политика обработки персональных данных</a>
+
+      <a href="https://locus.by/assets/docs/polozheniye_o_poryadke_obrabotki_personalnykh_dannykh_IDG.pdf" target="_blank" rel="noopener">Положение о порядке обработки персональных данных</a>
+
+    </div>
+
+    <div class="footer__buttons">
+
+      <button class="footer__btn footer__btn--wide" type="button" onclick="$('#modalActs').modal('show')">Акт сдачи-приемки оказанных услуг</button>
+
+      <a class="footer__btn footer__btn--narrow" href="source/dogovor-oferty.pdf" target="_blank" rel="noopener">Договор оферты</a>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="footer__bottom">
+
+    <div class="footer__bottom-inner">
+
+      <div class="footer__legal footer__legal--left">
+
+        © ООО «Издательский дом Гревцова».<br>
+
+        220053, г. Минск, ул. Будславская, 23/3, каб. 3.<br>
+
+        Тел.: +375 (17) 369-21-17.<br>
+
+        УНП 191260683.
+
+      </div>
+
+      <img class="footer__logo" src="img/footer/footer-logo.svg" alt="АПК Партнёр">
+
+      <div class="footer__legal footer__legal--right">
+
+        Воспроизведение материалов сайта<br>
+
+        www.kongress.vetforum.by без письменного согласия<br>
+
+        ООО «Издательский дом Гревцова» запрещено.<br>
+
+        Дизайн и разработка – ООО «Издательский дом Гревцова».
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+<button class="to-top" id="toTop" type="button" aria-label="Наверх"></button>
+
+
+<div class="modal modal--form regmodal" id="regmodal" style="display: none">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title" id="modal-title">РЕГИСТРАЦИЯ</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#regmodal').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <form id="register-form" autocomplete="off">
+          <input type="hidden" name="type" id="reg-type" value="Участник">
+          <div class="form-group">
+            <label for="top-name">Ф. И. О. <span class="required">*</span></label>
+            <input type="text" id="top-name" name="name" required>
+          </div>
+          <div class="form-group" id="company-group" style="display:none">
+            <label for="top-company">Наименование компании <span class="required">*</span></label>
+            <input type="text" id="top-company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="top-email">E-mail <span class="required">*</span></label>
+            <input type="email" id="top-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="top-phone">Моб. тел. <span class="required">*</span></label>
+            <input class="phone-mask" type="text" id="top-phone" name="phone" placeholder="+375 (__) ___-__-__" required>
+          </div>
+          <div class="agree-group">
+            <div class="check-group">
+              <input type="checkbox" id="agree_reg">
+              <label for="agree_reg" class="agree-label">Я ознакомлен(а) с <a class="agree-link" href="source/polozheniye_o_poryadke_obrabotki_personalnykh_dannykh.pdf" target="_blank" rel="noopener"><span class="agree-link__part">политикой обработки персональных данных</span><span class="agree-link__part agree-link__part--block">ООО «Издательский дом Гревцова»</span></a></label>
+            </div>
+          </div>
+          <div class="agree-group agree-group--with-icon">
+            <div class="check-group">
+              <input type="checkbox" id="agree_reg_2">
+              <label for="agree_reg_2">
+                <span>Цель обработки: регистрация на сайте для участия в&nbsp;мероприятии.</span>
+              </label>
+            </div>
+            <span class="agree-info" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="4.25" stroke="currentColor" stroke-width="0.75"/>
+                <path d="M5 4.2V6.8" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
+                <circle cx="5" cy="2.9" r="0.45" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+          <div class="modal-form-submit">
+            <button id="top-form-submit" type="submit" class="btn-gradient btn_register" disabled>Принять участие <span>&#8594;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--form" id="regsuccess" style="display: none">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title">Спасибо за заявку</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#regsuccess').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <p>В скором времени с вами свяжется менеджер.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal--form modal--login" id="modalActs" style="display: none" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#modalActs').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <form id="actForm">
+          <div class="form-group">
+            <label for="act-login">Логин</label>
+            <input type="text" id="act-login" name="login" required>
+          </div>
+          <div class="form-group">
+            <label for="act_password">Пароль</label>
+            <input type="password" name="password" required id="act_password">
+          </div>
+          <div class="login-remember">
+            <input type="checkbox" id="act-remember" name="remember">
+            <label for="act-remember">Запомнить меня на этом устройстве</label>
+          </div>
+          <div class="modal-form-submit">
+            <button type="submit" class="btn-gradient btn_register">Войти <span>&#8594;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="demo-banner">Демо-версия: формы не отправляются на сервер. Модалки работают для показа.</div>
+<script src="js/jquery-1.12.0.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript">
+  function modalSubmitArrow() {
+    return ' <span>&#8594;</span>';
+  }
+
+  function setModalSubmitLabel($button, text) {
+    $button.html(text + modalSubmitArrow());
+  }
+
+  function openRegistrationModal(type) {
+    var modal = $('#regmodal');
+    var $typeInput = modal.find('#reg-type');
+    var $submit = modal.find('#top-form-submit');
+    var $companyGroup = $('#company-group');
+    var $companyInput = $('#top-company');
+
+    $('#agree_reg, #agree_reg_2').prop('checked', false);
+    $('#top-form-submit').prop('disabled', true);
+
+    if (type === 'partners') {
+      $typeInput.val('Стать партнером');
+      $companyGroup.show();
+      $companyInput.prop('required', true);
+      setModalSubmitLabel($submit, 'Стать партнером');
+    } else if (type === 'speaker') {
+      $typeInput.val('Стать спикером');
+      $companyGroup.hide();
+      $companyInput.prop('required', false);
+      setModalSubmitLabel($submit, 'Стать спикером');
+    } else {
+      $typeInput.val('Участник');
+      $companyGroup.hide();
+      $companyInput.prop('required', false);
+      setModalSubmitLabel($submit, 'Принять участие');
+    }
+
+    modal.modal('show');
+  }
+
+  $(function () {
+    $('#regmodal').on('hidden.bs.modal', function () {
+      $(this).find('form')[0].reset();
+      $('#top-form-submit').prop('disabled', true);
+    });
+
+    $('#agree_reg, #agree_reg_2').on('change', function () {
+      $('#top-form-submit').prop('disabled', !($('#agree_reg').is(':checked') && $('#agree_reg_2').is(':checked')));
+    });
+  });
+</script>
+<script src="demo.js"></script>
+</body>
+</html>
