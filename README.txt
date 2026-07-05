@@ -6,9 +6,10 @@
 2. Или в этой папке: python -m http.server 8080 → http://localhost:8080
 
 GitHub Pages:
-1. Settings → Pages → Deploy from a branch → main / (root)
-2. Запушьте содержимое этой папки в репозиторий vetforum
-3. Сайт: https://cicligs.github.io/vetforum/
+1. Settings → Pages → Deploy from a branch → gh-pages / (root)
+2. Запушьте эту папку в репозиторий vetforum
+3. Workflow сам обновит ветку gh-pages после push в main
+4. Сайт: https://cicligs.github.io/vetforum/
 
 Работает: вёрстка, меню, карусель, модалки регистрации и входа.
 Не работает: реальная отправка заявок на почту.
