@@ -101,6 +101,93 @@ document.addEventListener('DOMContentLoaded', function () {
   function setActiveNav(sectionId) {
     activateInMenu('.navbar-menu', sectionId);
     activateInMenu('.mobile-menu__nav', sectionId);
+
+    var smiItem = document.querySelector('.navbar-menu__smi');
+    if (smiItem) {
+      smiItem.classList.toggle('is-active', sectionId === 'magazine');
+    }
+  }
+
+  var navbar = document.querySelector('.navbar');
+  var smiTrigger = document.querySelector('.nav-smi-trigger');
+  var smiPanel = document.getElementById('nav-smi-panel');
+  var smiMenuItem = document.querySelector('.navbar-menu__smi');
+
+  function closeSmiPanel() {
+    if (!navbar || !smiPanel || !smiTrigger) return;
+    navbar.classList.remove('is-smi-open');
+    smiPanel.hidden = true;
+    smiTrigger.setAttribute('aria-expanded', 'false');
+  }
+
+  function openSmiPanel() {
+    if (!navbar || !smiPanel || !smiTrigger) return;
+    navbar.classList.add('is-smi-open');
+    smiPanel.hidden = false;
+    smiTrigger.setAttribute('aria-expanded', 'true');
+    if (smiMenuItem) smiMenuItem.classList.add('is-active');
+    document.querySelectorAll('.navbar-menu li').forEach(function (item) {
+      if (!item.classList.contains('navbar-menu__smi')) {
+        item.classList.remove('is-active');
+      }
+    });
+  }
+
+  var smiCloseTimer;
+  var smiHoverMedia = window.matchMedia('(hover: hover) and (min-width: 901px)');
+
+  function scheduleSmiClose() {
+    smiCloseTimer = window.setTimeout(closeSmiPanel, 120);
+  }
+
+  function cancelSmiClose() {
+    window.clearTimeout(smiCloseTimer);
+  }
+
+  if (smiTrigger && smiPanel && navbar && smiMenuItem) {
+    smiTrigger.addEventListener('mousedown', function (e) {
+      e.preventDefault();
+    });
+
+    if (smiHoverMedia.matches) {
+      smiMenuItem.addEventListener('mouseenter', function () {
+        cancelSmiClose();
+        openSmiPanel();
+      });
+
+      smiPanel.addEventListener('mouseenter', function () {
+        cancelSmiClose();
+        openSmiPanel();
+      });
+
+      smiMenuItem.addEventListener('mouseleave', scheduleSmiClose);
+      smiPanel.addEventListener('mouseleave', scheduleSmiClose);
+    }
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeSmiPanel();
+    });
+
+    smiPanel.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', closeSmiPanel);
+    });
+
+    document.querySelectorAll('.navbar-menu a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', closeSmiPanel);
+    });
+  }
+
+  var mobileSmiToggle = document.querySelector('.mobile-menu__smi-toggle');
+  var mobileSmiPanel = document.querySelector('.mobile-menu__smi-panel');
+  var mobileSmiItem = document.querySelector('.mobile-menu__smi');
+
+  if (mobileSmiToggle && mobileSmiPanel && mobileSmiItem) {
+    mobileSmiToggle.addEventListener('click', function () {
+      var isOpen = mobileSmiToggle.getAttribute('aria-expanded') === 'true';
+      mobileSmiToggle.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+      mobileSmiPanel.hidden = isOpen;
+      mobileSmiItem.classList.toggle('is-open', !isOpen);
+    });
   }
 
   var programCard = document.getElementById('program');
