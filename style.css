@@ -1009,18 +1009,6 @@ h1, h2, h3, .section-heading, .hero-title, .stats-label, .stat-value, .video-thu
   display: block;
 }
 
-.video-main__play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 56px;
-  height: 56px;
-  transform: translate(-50%, -50%);
-  background: url("img/header/play-orange.svg") center / contain no-repeat;
-  pointer-events: none;
-  z-index: 2;
-}
-
 .video-thumb-list {
   display: flex;
   flex-direction: column;
