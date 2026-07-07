@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var smiCloseTimer;
-  var smiHoverMedia = window.matchMedia('(hover: hover) and (min-width: 901px)');
+  var smiHoverMedia = window.matchMedia('(hover: hover) and (min-width: 1301px)');
 
   function scheduleSmiClose() {
     smiCloseTimer = window.setTimeout(closeSmiPanel, 120);
