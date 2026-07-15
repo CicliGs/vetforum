@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Unbounded:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Nunito:wght@400&display=swap');
+
+/*
+  Vetforum — styles architecture
+  -----------------------------
+  Base (desktop >1700) lives first by section.
+  Responsive layers (descending max-width / tablet ranges):
+
+    1101–1700  scaled desktop (hero, magazine)
+    1101–1400  tighter hero / body
+    ≤1700…≤1200 progressive type/spacing compress
+    ≤1300      compact navbar (hamburger)
+    ≤1100      content toggles + shared shrink (NO layout flip)
+    901–1100   footer with logo
+    ≤900       mobile footer (no logo)
+    769–1100   tablet: reduced desktop layout
+    ≤768       phone
+
+  Rule: layout collapse (1-col / hero column) only at ≤768.
+  Tablet (769–1100) sets its own layout; it must not undo ≤1100 rules.
+*/
+
+:root {
+  --orange: #ff9c59;
+  --orange-deep: #f18a45;
+  --yellow: #f1dd45;
+  --gradient: linear-gradient(90deg, #f18a45 2%, #f1dd45 91%);
+  --gradient-alt: linear-gradient(90deg, #f18a45 0%, #f2dd46 100%);
+  --dark: #262626;
+  --muted: #666;
+  --light: #efefef;
+  --page: #f5f5f5;
+  --hero-bg: #f9f9f9;
+  --radius: 10px;
+  --container: 1702px;
+  --shadow-btn: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-nav: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --font-heading: 'Unbounded', Arial, sans-serif;
+  --font-body: 'Roboto', Arial, sans-serif;
+  --font-footer: 'Nunito', Arial, sans-serif;
+  --font-form: 'Montserrat', Arial, sans-serif;
+  --lh-tight: 1.4;
+  --lh-base: 1.6;
+  --ls-wide: 0.05em;
+}

@@ -1,0 +1,137 @@
+/* MAGAZINE — Figma node 992:86 */
+.magazine-section {
+  --magazine-card-height: 360px;
+  --magazine-content-offset: 90px;
+  max-width: calc(var(--container) + 40px);
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.magazine-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 554px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.magazine-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  max-width: 554px;
+}
+
+.magazine-heading {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+
+.magazine-image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  height: var(--magazine-card-height);
+  max-height: var(--magazine-card-height);
+  flex-shrink: 0;
+}
+
+.magazine-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
+}
+
+.magazine-content {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 36px 59px 28px;
+  margin-top: var(--magazine-content-offset);
+  height: auto;
+  min-height: var(--magazine-card-height);
+  max-height: none;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.magazine-content h3 {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 18px;
+  line-height: var(--lh-tight);
+  flex-shrink: 0;
+}
+
+.magazine-copy {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.magazine-content p,
+.magazine-content .magazine-copy p {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+  line-height: var(--lh-base);
+  margin: 0 0 12px;
+}
+
+.magazine-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.magazine-copy--compact {
+  display: none;
+}
+
+.magazine-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.magazine-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 14px;
+  width: 100%;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.magazine-actions__subscribe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.magazine-actions__subscribe .btn-gradient {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  text-align: center;
+  white-space: normal;
+  justify-self: stretch;
+  box-sizing: border-box;
+}
+
+.magazine-btn-text--mobile {
+  display: none;
+}

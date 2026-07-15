@@ -4,7 +4,7 @@ $root = $PSScriptRoot
 $keepHeader = @(
   'cow-hero.png', 'logo-brand.svg', 'logo-triangle.png',
   'icon-telegram.svg', 'icon-instagram.svg', 'icon-call.svg', 'icon-call-outgoing.svg',
-  'program-card-decor.svg', 'main-bg-bubbles--mobile.svg'
+  'program-card-decor.svg', 'main-bg-bubbles--mobile.svg', 'to-top.svg', 'to-top.png', 'play-orange.svg'
 )
 
 $keepAgriculture = @(
@@ -13,8 +13,14 @@ $keepAgriculture = @(
 )
 
 $keepOrgs = @('org-1.png', 'org-2.png', 'org-3.png')
-$keepJs = @('jquery-1.12.0.js', 'bootstrap.js', 'jquery.maskedinput.min.js')
-$keepCss = @('bootstrap.min.css')
+$keepJs = @(
+  'jquery-1.12.0.js', 'bootstrap.js', 'jquery.maskedinput.min.js',
+  'main.js', 'regmodal.js', 'demo.js'
+)
+$keepCssFiles = @(
+  'bootstrap.min.css', 'main.css', 'tokens.css', 'base.css', 'responsive.css'
+)
+$keepCssDirs = @('components', 'sections')
 
 function Remove-Except($dir, [string[]]$keep) {
   if (-not (Test-Path $dir)) { return }
@@ -32,10 +38,14 @@ Remove-Except (Join-Path $img 'header') $keepHeader
 Remove-Except (Join-Path $img 'agriculture') $keepAgriculture
 Remove-Except (Join-Path $img 'orgs') $keepOrgs
 
+# CSS: keep modular files and component/section directories intact
 $css = Join-Path $root 'css'
-Get-ChildItem $css -Recurse -Directory | Remove-Item -Recurse -Force
-Remove-Except $css $keepCss
+if (Test-Path $css) {
+  Get-ChildItem $css -Directory | Where-Object { $keepCssDirs -notcontains $_.Name } | Remove-Item -Recurse -Force
+  Remove-Except $css $keepCssFiles
+}
 
+# JS: keep site scripts; drop vendor extras if any
 $js = Join-Path $root 'js'
 if (Test-Path (Join-Path $js 'vendor')) { Remove-Item (Join-Path $js 'vendor') -Recurse -Force }
 Remove-Except $js $keepJs

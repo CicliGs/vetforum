@@ -1,0 +1,222 @@
+/* CONTACTS */
+.contacts-section {
+  max-width: calc(var(--container) + 40px);
+  margin: 0 auto 24px;
+  padding: 80px clamp(40px, 9.1vw, 172px);
+  border-radius: 25px;
+  background: var(--gradient-alt);
+  display: grid;
+  grid-template-columns: minmax(0, 506px) minmax(0, 786px);
+  gap: 106px;
+  align-items: start;
+  justify-content: center;
+  overflow: visible;
+}
+
+.contacts-map {
+  display: flex;
+  flex-direction: column;
+  width: 506px;
+  max-width: 100%;
+  min-height: 0;
+  order: 1;
+  min-width: 0;
+}
+
+.contacts-map__frame {
+  position: relative;
+  width: 506px;
+  max-width: 100%;
+  height: 503px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.contacts-map iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.contacts-map__caption {
+  margin-top: 37px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.contacts-map__social {
+  display: flex;
+  gap: 22px;
+  margin-top: auto;
+  padding-top: 37px;
+}
+
+.contacts-map__social img {
+  width: 29px;
+  height: 29px;
+  filter: brightness(0) invert(1);
+}
+
+.contacts-people {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 786px;
+  order: 2;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 25px 30px;
+  display: grid;
+  grid-template-columns: 199px minmax(0, 1fr);
+  column-gap: 34px;
+  min-height: 222px;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-avatar {
+  grid-column: 1;
+  grid-row: 1;
+  width: 199px;
+  height: 172px;
+  border-radius: var(--radius);
+  object-fit: cover;
+  align-self: start;
+}
+
+.contact-main {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 172px;
+  min-width: 0;
+}
+
+.contact-info {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info h4 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin: 0 0 6px;
+  color: #525253;
+}
+
+.contact-info .role {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: var(--lh-tight);
+  letter-spacing: 0;
+  color: #f18a45;
+  margin: 0;
+}
+
+.contact-info .role br {
+  display: none;
+}
+
+.contact-info .contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: #264a59;
+}
+
+.contact-info .contact-phone img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  min-width: 0;
+  margin-top: 14px;
+  flex-shrink: 0;
+}
+
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 300;
+  color: #264a59;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.contact-phone img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.contact-actions__btn {
+  flex-shrink: 0;
+  font-size: 12.9px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  border-radius: 6.5px;
+  justify-content: center;
+  min-height: 38px;
+  box-sizing: border-box;
+}
+
+.contact-actions__btn-text--mobile {
+  display: none;
+}
+
+.contact-card:first-child .contact-actions__btn {
+  width: 362px;
+  max-width: 100%;
+}
+
+.contact-card:nth-child(2) .contact-actions__btn,
+.contact-card:nth-child(3) .contact-actions__btn {
+  width: 211px;
+  max-width: 100%;
+}
