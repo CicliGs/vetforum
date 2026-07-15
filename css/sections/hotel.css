@@ -1,0 +1,33 @@
+/* HOTEL */
+.hotel-section {
+  max-width: calc(var(--container) + 40px);
+  margin: 0 auto;
+  padding: 60px 20px 0;
+}
+
+.hotel-section h2 {
+  font-family: var(--font-heading);
+  font-size: 25px;
+  font-weight: 400;
+  line-height: var(--lh-tight);
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.hotel-section .lead {
+  font-family: var(--font-heading);
+  color: var(--orange-deep);
+  font-weight: 500;
+  font-size: 14.5px;
+  line-height: var(--lh-base);
+  margin-bottom: 14px;
+}
+
+.hotel-section p {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+  line-height: var(--lh-base);
+  max-width: 760px;
+}

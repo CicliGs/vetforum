@@ -1,0 +1,38 @@
+.to-top {
+  position: fixed;
+  right: max(16px, calc((100% - min(var(--container), 100%)) / 2 + 16px));
+  bottom: 24px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: url("../../img/header/to-top.svg") center / 100% no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  cursor: pointer;
+  padding: 0;
+}
+
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.to-top:hover {
+  transform: translateY(-2px);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}

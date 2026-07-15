@@ -1,0 +1,34 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--dark);
+  line-height: var(--lh-tight);
+  padding: clamp(21px, 4.12vw, 79px) max(16px, calc((100% - var(--container)) / 2)) 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, .section-heading, .hero-title, .stats-label, .stat-value, .video-thumb-title {
+  font-family: var(--font-heading);
+}

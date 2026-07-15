@@ -1,0 +1,97 @@
+<div class="modal modal--form regmodal" id="regmodal" style="display: none">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title" id="modal-title">РЕГИСТРАЦИЯ</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#regmodal').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <form id="register-form" autocomplete="off">
+          <input type="hidden" name="type" id="reg-type" value="Участник">
+          <div class="form-group">
+            <label for="top-name">Ф. И. О. <span class="required">*</span></label>
+            <input type="text" id="top-name" name="name" required>
+          </div>
+          <div class="form-group" id="company-group" style="display:none">
+            <label for="top-company">Наименование компании <span class="required">*</span></label>
+            <input type="text" id="top-company" name="company">
+          </div>
+          <div class="form-group">
+            <label for="top-email">E-mail <span class="required">*</span></label>
+            <input type="email" id="top-email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="top-phone">Моб. тел. <span class="required">*</span></label>
+            <input class="phone-mask" type="text" id="top-phone" name="phone" placeholder="+375 (__) ___-__-__" required>
+          </div>
+          <div class="agree-group">
+            <div class="check-group">
+              <input type="checkbox" id="agree_reg">
+              <label for="agree_reg" class="agree-label">Я ознакомлен(а) с <a class="agree-link" href="source/polozheniye_o_poryadke_obrabotki_personalnykh_dannykh.pdf" target="_blank" rel="noopener"><span class="agree-link__part">политикой обработки персональных данных</span> <span class="agree-link__part">ООО «Издательский дом Гревцова»</span></a></label>
+            </div>
+          </div>
+          <div class="agree-group agree-group--with-icon">
+            <div class="check-group">
+              <input type="checkbox" id="agree_reg_2">
+              <label for="agree_reg_2">
+                <span>Цель обработки: регистрация на сайте для участия в&nbsp;мероприятии.</span>
+              </label>
+            </div>
+            <span class="agree-info" aria-hidden="true">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="5" cy="5" r="4.25" stroke="currentColor" stroke-width="0.75"/>
+                <path d="M5 4.2V6.8" stroke="currentColor" stroke-width="0.75" stroke-linecap="round"/>
+                <circle cx="5" cy="2.9" r="0.45" fill="currentColor"/>
+              </svg>
+            </span>
+          </div>
+          <div class="modal-form-submit">
+            <button id="top-form-submit" type="submit" class="btn-gradient btn_register" disabled>Принять участие <span>&#8594;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal--form" id="regsuccess" style="display: none">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title">Спасибо за заявку</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#regsuccess').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <p>В скором времени с вами свяжется менеджер.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal--form modal--login" id="modalActs" style="display: none" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-form-header">
+        <div class="modal-title">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</div>
+        <button type="button" class="modal-close" data-dismiss="modal" aria-label="Закрыть" onclick="$('#modalActs').modal('hide')"></button>
+      </div>
+      <div class="modal-body">
+        <form id="actForm">
+          <div class="form-group">
+            <label for="act-login">Логин</label>
+            <input type="text" id="act-login" name="login" required>
+          </div>
+          <div class="form-group">
+            <label for="act_password">Пароль</label>
+            <input type="password" name="password" required id="act_password">
+          </div>
+          <div class="login-remember">
+            <input type="checkbox" id="act-remember" name="remember">
+            <label for="act-remember">Запомнить меня на этом устройстве</label>
+          </div>
+          <div class="modal-form-submit">
+            <button type="submit" class="btn-gradient btn_register">Войти <span>&#8594;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
